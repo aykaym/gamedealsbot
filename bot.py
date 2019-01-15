@@ -28,8 +28,6 @@ def get_games(id):
 
 
 def get_stores():
-    stores = []
-    ids = []
     url = "http://cheapshark.com/api/1.0/stores"
     response = requests.get(url)
     platforms = response.json()
@@ -139,7 +137,7 @@ async def showStores(ctx):
 
 
 @client.command(aliases = ['Help', 'HELP'])
-async def help(ctx):
+async def help():
     help = "You have asked for help!\nThis discord bot is capable of requesting the best game deals from a Public API across multiple platforms.\nCommands:\n`/deals_csv` - Sends detailed game deals information to DMs in csv format\n`/deals_spam` - Sends game deals to your DMs and includes a picture.\n`/deals_custom \"<store>\"` - Searches for specific store\n`/showStores` - Shows stores that can be used in custom search"
     await client.say(help)
 
