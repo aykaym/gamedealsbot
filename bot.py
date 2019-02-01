@@ -102,8 +102,8 @@ async def deals_spam(ctx):
     print("/deals_spam")
     await channel.send("Your game deals are being sent to your DMs right now")
     for game in game_list:
-                await author.send("-" * 120 + "\nDeal Link: "+ game[11] +"\nTitle: " + game[0] + "\nStore: " + game[5] + "\nMSRP: " + game[6] + "\nSale Price: " + game[7] + "\nDiscount: " + game[8] + "\nDeal Rating: " + game[9])
-                time.sleep(1)
+        await author.send("-" * 120 + "\nDeal Link: "+ game[11] +"\nTitle: " + game[0] + "\nStore: " + game[5] + "\nMSRP: " + game[6] + "\nSale Price: " + game[7] + "\nDiscount: " + game[8] + "\nDeal Rating: " + game[9])
+        time.sleep(1)
 
 @client.command(pass_context=True, aliases = ['Deals_Custom', 'Deals_custom', 'deals_Custom', 'DEALS_CUSTOM'])
 async def deals_custom(ctx, arg):
